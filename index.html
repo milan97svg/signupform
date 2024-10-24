@@ -3,60 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Form</title>
     <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
 </head>
-<body class="mainpage">
-    <header class="logo">
-        <img src="images/Transparent Logo-03.png" width="80px" height="auto" alt="Logo">
-    </header>
-    <main class="signupcontainer">
-        <div class="signup">
-            <div class="signup__header">
-                <h1>
-                    Sign up now!
-                </h1>
-                <p>
-                    Already have an account? <a href="#">Log In</a>
-                </p>
+<body class="mainbody">
+    <div class="container">
+        <header class="headercontainer">
+                <div class="header">
+                    <h1>
+                        Welcome! <br>
+                        First things first...
+                    </h1>
+                    <p>
+                        Create a profile to personalize how you'll appear to collaborators
+                    </p>
             </div>
-            <form class="form" action="#" method="post">
-                <div class="mainform">
-                    <label for="firstname">First Name</label>
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="firstname" name="firstname">
-                    <input type="text" id="lastname" name="lastname">
-                    <label for="phone">Phone</label>
-                    <label for="email">E-mail</label>
-                    <input type="number" id="phone" name="phone">
-                    <input type="email" id="email" name="email">
-                    <label for="password">Password</label>
-                    <label for="confirmpassword">Confirm Password</label>
-                    <input type="password" id="password" name="password" required>
-                    <input type="password" id="confirmpassword" name="confirmpassword" required>
+        </header>
+        <main class="maincontainer">
+            <div class="form">
+                <div class="profilepic">
+                    <img src="images/Logo-04-01.png" width="100" height="100" alt="profilepicture">
+                    <button class="profilepicbtn">CHANGE</button>
                 </div>
-                <div class="promo">
-                    <div class="subscription">
-                        <input type="checkbox" id="subscription" value="subscription">
-                        <label for="subscription">Yes, I want to receive emails</label>
-                    </div>
-                    <div class="agreement">
-                        <input type="checkbox" id="agreement" value="aggrement" required>
-                        <label for="agreement">I agree to the <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Fees</a>.</label>
-                    </div>
+                <div class="formcontainer">
+                    <form action="#" method="post">
+                        <div class="namegroup">
+                            <div class="firstname">
+                                <p>FIRST NAME</p>
+                                <input type="text" id="firstname" name="firstname">
+                            </div>
+                            <div class="lastname">
+                                <p>LAST NAME</p>
+                                <input type="text" id="lastname" name="firstname">
+                            </div>
+                        </div>
+                        <div class="emailaddress">
+                            <p>EMAIL ADDRESS</p>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="workchoicecontainer">
+                            <p>WHAT BEST DESCRIBES WHAT YOU DO?</p>
+                            <div class="workchoice">
+                                <span class="designer">
+                                    <input type="radio" id="designer" name="work" value="designer">
+                                    <label for="designer">Designer</label>
+                                </span>
+                                <span class="developer">
+                                    <input type="radio" id="developer" name="work" value="developer">
+                                    <label for="developer">Developer</label>
+                                </span>
+                                <span class="other">
+                                    <input type="radio" id="other" name="work" value="other">
+                                    <label for="other">Other</label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="workspaceurl">
+                            <p>WORKSPACE URL</p>
+                            <div class="urlcontainer">
+                                <input type="text" id="urlform">
+                                <p>.mellowpalettes.com</p>
+                            </div>
+                        </div>
+                        <div class="password">
+                            <div class="firstpassword">
+                                <p>ENTER PASSWORD</p>
+                                <input type="password" id="password" name="password">
+                            </div>
+                            <div class="confirmpassword">
+                                <p>REPEAT PASSWORD</p>
+                                <input type="password" id="password" name="password">
+                            </div>
+                        </div>
+                        <button class="btn">Create Workspace</button>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </main>
-    <aside class="sideimage">
-        <div class="testimony">
-            <h2>
-                We move 10x faster than our peers and stay consistent. While they're bogged down with design debt, we're releasing new features.
-            </h2>
-            <h3>Marcus</h3>
-            <p>Founder, Catalog</p>    
-        </div>
-    </aside>
-    <script src="script.js"></script>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

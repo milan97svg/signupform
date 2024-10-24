@@ -4,123 +4,162 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Monsterrat', sans-serif;
 }
 
-.mainpage {
+:root {
+    font-family:  "Montserrat", serif;
+    --MAIN-COLOR: #415BFB;
+    --BG-COLOR: #F4F6FB;
+    --BTN-COLOR: #F9FAFF;
+    --BTN-BORDER: #E0E8FF;
+    --FONT-COLOR: #343F53;
+    --BTN-FONT: #797e87;
+    --SEC-FONT-COLOR: #B1BBC9;
+}
+
+.mainbody {
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--BG-COLOR);
 }
 
-.logo {
-    position: absolute;
-
-}
-
-.sideimage {
-    width: 100%;
+.container {
+    width: 80%;
     height: 100%;
-    background-image: url(images/christian-buehner-h0_elok-uKI-unsplash.jpg);
-    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+.headercontainer {
+    height: 100%;
+    background-image: url(images/landingpage.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left bottom;
+    background-size: 90%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 8rem;
+    margin-left: 2rem;
+
+    gap: 1rem;
+    color: var(--FONT-COLOR);
+}
+
+.header>h1 {
+    font-size: 2rem;
+    font-weight: 500;
     position: relative;
 }
 
-.testimony {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    bottom: 1rem;
-    left: 1rem;
-    color: whitesmoke;
-    text-shadow: 1px 2px 10px rgba(54, 51, 51, 0.918);
+
+.maincontainer {
+    margin: 3rem;
+    padding: 2rem;
+    background-color: white;
+    backdrop-filter: blur(9px);
+    border-radius: 16px;
+
 }
 
-.testimony>h2 {
-    font-size: 2.5rem;
-    line-height: 1.25;
+.form {
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: var(--BTN-FONT);
+
 }
 
-.signup {
+label, input {
+    font: inherit;
+}
+
+.profilepic {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin: 2rem;
-    gap: 2rem;
 }
 
-.mainform {
+.profilepic>button {
+    border: none;
+    border: 1px solid;
+    font-size: 10px;
+    color: var(--BTN-FONT);
+    font-weight: 550;
+    background-color: var(--BTN-COLOR);
+    border-color: var(--BTN-BORDER);
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.firstname, .lastname, .emailaddress, .workchoice, .workspaceurl, .firstpassword, .confirmpassword {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.namegroup {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-    margin-top: 2rem;
-}
-
-form
-input
-label {
-    font: inherit;
-    display: inline-block;
-}
-
-.mainform>input {
-    width: 15rem;
-    height: 2rem;
-    border: none;
-    box-shadow: 1px 1px 3px rgba(184, 184, 184, 0.695);
-    padding: 0.25rem;
-}
-
-.mainform>label {
-    color: grey;
-    font-weight: 550;
-    font-size: 0.9rem;
-}
-
-.mainform>input {
-    margin-right: 1.4rem;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.signup__header {
+form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    text-align: start;
+    gap: 0.5rem;
 }
 
-h1 {
-    font-size: 2rem;
-    margin: auto;
-    font-weight: 600;
+.formcontainer input {
+    border: none;
+    border: 1px solid var(--BTN-BORDER);
+    background-color: var(--BTN-COLOR);
+    height: 1.75rem;
+    border-radius: 4px;
 }
 
-.signup__header>p {
-    color: grey;
+.formcontainer input[type="radio"] {
+    border: none;
+    border: 1px solid var(--BTN-BORDER);
+    opacity: 60%;
+    width: 1rem;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(13, 92, 132);
-    font-weight: 550;
-}
-
-.promo {
+.designer, .developer, .other {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-
-.signupcontainer {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin: auto;
+    gap: 0.5rem;
+}
+
+.workchoice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.emailaddress, .workchoice, .workspaceurl, .firstpassword, .confirmpassword {
+    margin-bottom: 1rem;
+}
+
+.urlcontainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    border: none;
+    border: 1px solid var(--BTN-BORDER);
+    border-radius: 8px;
+    height: 2.7rem;
+    background-color: var(--MAIN-COLOR);
+    color: white;
+    font-weight: 600;
 }
